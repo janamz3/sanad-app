@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>سَنَد — نموذج أولي</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#F3F8F7;--card:#fff;--ink:#12302F;--mut:#5B7170;--bd:#CFDCDA;--g:#1E7B4F;--gb:#DDF1E5;--y:#8A5A00;--yb:#FCEFC9;--r:#A8271F;--rb:#FADCD8;--b:#17559B;--bb:#DCE9F8;--pri:#0F5C5C;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Tajawal,system-ui,sans-serif;line-height:1.6;padding:14px}
+.tabs{display:flex;max-width:380px;margin:0 auto 12px;background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:4px;gap:4px}
+.tabs button{flex:1;border:0;background:none;color:var(--mut);font:500 15px Tajawal,sans-serif;padding:10px;border-radius:10px;cursor:pointer}
+.tabs button.on{background:var(--pri);color:#fff}
+.phone{max-width:380px;margin:0 auto;background:var(--card);border:1px solid var(--bd);border-radius:28px;padding:18px;min-height:580px;display:flex;flex-direction:column;gap:12px}
+.top{display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--mut)}
+.big{border:0;border-radius:18px;font:700 22px Tajawal,sans-serif;min-height:68px;display:flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;width:100%}
+.big svg{width:28px;height:28px}
+.g{background:var(--gb);color:var(--g)}.b{background:var(--bb);color:var(--b)}.r{background:var(--rb);color:var(--r)}.y{background:var(--yb);color:var(--y)}
+.med{border-radius:20px;padding:16px;text-align:center}
+.med h2{margin:4px 0 0;font-size:26px}.med p{margin:0;font-size:19px}
+.lnk{background:none;border:0;color:inherit;font:500 15px Tajawal,sans-serif;text-decoration:underline;cursor:pointer;margin:6px 0 0}
+.h{font-size:24px;font-weight:700;margin:0;text-align:center}
+.chips{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.chips button{border:1px solid var(--bd);background:var(--card);color:var(--ink);border-radius:14px;font:700 24px Tajawal,sans-serif;padding:14px 4px;cursor:pointer}
+.chips small{display:block;font:400 12px Tajawal,sans-serif;color:var(--mut)}
+.mic{width:96px;height:96px;border-radius:50%;background:var(--bb);color:var(--b);display:flex;align-items:center;justify-content:center;margin:6px auto}
+.mic svg{width:44px;height:44px}
+.note{font-size:13px;color:var(--mut);text-align:center;margin:0}
+.card{border-radius:16px;padding:14px}
+.card .row{display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:18px}
+.card ul{margin:8px 0 0;padding:0;list-style:none;font-size:15px}
+.pill{font-size:12px;font-weight:500;padding:2px 10px;border-radius:99px;background:var(--card)}
+.ai{background:var(--bg);border-radius:12px;padding:10px 12px;font-size:14px;color:var(--mut)}
+.sec{border:1px solid var(--bd);background:var(--card);color:var(--ink);border-radius:12px;font:500 16px Tajawal,sans-serif;padding:12px;cursor:pointer;width:100%}
+.pri{background:var(--pri);color:#fff;border-color:var(--pri)}
+.bar{height:10px;border-radius:5px;background:var(--bd);overflow:hidden}.bar i{display:block;height:100%;background:var(--g)}
+.rep{display:flex;flex-direction:column;gap:10px;font-size:15px}.rep div{display:flex;justify-content:space-between}
+.foot{max-width:380px;margin:12px auto 0;text-align:center;font-size:12px;color:var(--mut)}
+.foot button{background:none;border:0;color:var(--pri);font:500 12px Tajawal,sans-serif;text-decoration:underline;cursor:pointer}
+input[type=text],input[type=tel],input[type=password],select{width:100%;font:400 17px Tajawal,sans-serif;padding:11px;border:1px solid var(--bd);border-radius:12px;background:var(--card);color:var(--ink)}
+label{font-size:14px;color:var(--mut);display:block;margin-bottom:4px}
+.code{font:700 40px Tajawal,sans-serif;letter-spacing:8px;text-align:center}
+.cols{display:flex;gap:8px}.cols>*{flex:1}
+.sw{display:flex;gap:10px}.sw label{margin:0}.sw input{position:absolute;opacity:0}.sw span{display:block;width:36px;height:36px;border-radius:50%;border:2px solid var(--bd)}.sw input:checked+span{outline:3px solid var(--pri);outline-offset:2px}.sw input:focus-visible+span{outline:3px solid var(--pri)}
+.mrow{display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--bd);font-size:15px}.mrow:last-child{border:0}.mrow small{color:var(--mut);display:block}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--pri);outline-offset:2px}
+input[type=file]{font:400 14px Tajawal,sans-serif;width:100%;color:var(--ink)}.brand{max-width:380px;margin:0 auto 12px;background:#0F5C5C;color:#fff;border-radius:18px;padding:12px 18px;text-align:center}.brand b{display:block;font-size:30px;line-height:1.3}.brand span{font-size:13px;color:#D7EFEC}textarea{width:100%;font:400 16px Tajawal,sans-serif;padding:10px;border:1px solid var(--bd);border-radius:12px;background:var(--card);color:var(--ink);resize:vertical}
+.tb{width:100%;border-collapse:separate;border-spacing:3px;font-size:12px;table-layout:fixed}.tb th{font-weight:700;color:var(--mut);padding:3px 0}.tb th.tdy{background:var(--pri);color:#fff;border-radius:8px}.tb td{height:32px;text-align:center;border-radius:8px;font-size:15px}.tb th:first-child{width:84px}.tb td.nm{text-align:start;font-size:12px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding-inline-end:4px}.tb .c0{color:var(--bd)}.tb .c1{background:var(--gb);color:var(--g)}.tb .c1 svg{vertical-align:middle}.tb .c2{background:var(--rb);color:var(--r);font-weight:700}.tb .c3{background:var(--yb);color:var(--y)}.tb .c4{color:var(--mut);border:1px dashed var(--bd)}
+.dys{display:flex;flex-wrap:wrap;gap:6px}.dy{display:inline-block;margin:0}.dy input{position:absolute;opacity:0}.dy span{display:inline-block;padding:6px 10px;border:1px solid var(--bd);border-radius:20px;font-size:13px;color:var(--mut);background:var(--card)}.dy input:checked+span{background:var(--pri);color:#fff;border-color:var(--pri)}.dy input:focus-visible+span{outline:3px solid var(--pri)}
+</style>
+</head>
+<body>
+<div class="brand"><b>سَنَد</b><span>مرافق ذكي يطمّن الأبناء ويسهّل الدواء على كبار السن</span></div>
+<div class="tabs" role="tablist"><button id="t-old" onclick="setView('old')">كبير السن</button><button id="t-kid" onclick="setView('kid')">المرافق</button></div>
+<div class="phone" id="app" aria-live="polite"></div>
+<p class="foot">نموذج أولي تجريبي، البيانات غير حقيقية. <button onclick="reset()">إعادة ضبط</button></p>
+<script>
+function init(){return{view:'kid',scr:'home',kscr:'auth',mode:'signup',acc:null,pat:null,linked:false,meds:[],log:{},ring:[],today:(new Date().getDay()+1)%7,sugar:null,alert:false,fresh:null,f:{},photo:null,color:'#9CC6F5',ai:null,err:''}}
+var S=init();
+var I={
+ok:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>',
+mic:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0013 0M12 17.5V21"/></svg>',
+sos:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></svg>'};
+function box(c){return '<svg viewBox="0 0 200 90" width="200" height="90" role="img" aria-label="علبة الدواء وشكل الحبة"><rect x="6" y="14" width="124" height="66" rx="8" fill="#fff" stroke="#8aa" stroke-width="2"/><rect x="6" y="14" width="124" height="20" rx="8" fill="#0F5C5C"/><rect x="18" y="46" width="80" height="7" rx="3" fill="#B9C9C7"/><rect x="18" y="60" width="52" height="7" rx="3" fill="#B9C9C7"/><circle cx="165" cy="45" r="26" fill="'+c+'" stroke="#6b7f7d" stroke-width="2"/><path d="M148 45h34" stroke="#6b7f7d" stroke-width="2"/></svg>'}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function ar(n){return String(n).replace(/\d/g,function(d){return'٠١٢٣٤٥٦٧٨٩'[d]})}
+function el(i){return document.getElementById(i)}
+function V(k){return esc(S.f[k]||'')}
+function keep(){document.querySelectorAll('#app input[id],#app select[id]').forEach(function(e){if(e.type!=='file')S.f[e.id]=e.value});var c=document.querySelector('input[name=c]:checked');if(c)S.color=c.value}
+function setView(v){keep();S.view=v;S.scr='home';S.err='';draw()}
+function go(s){S.scr=s;draw()}
+function kgo(s){keep();S.kscr=s;S.err='';draw()}
+function reset(){var v=S.view;S=init();S.view=v;draw()}
+function pend(){return S.meds.filter(function(m){return!m.taken})}
+function speak(t){try{var u=new SpeechSynthesisUtterance(t);u.lang='ar-SA';speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){}}
+function take(id){S.meds.forEach(function(m){if(m.id===id)m.taken=true});S.fresh=null;draw()}
+function rec(v){S.sugar=v;S.scr='res';draw()}
+function help(){S.alert=true;S.scr='sos';draw()}
+function cancel(){S.alert=false;S.scr='home';draw()}
+function mode(m){keep();S.mode=m;S.err='';draw()}
+function signup(){keep();var f=S.f,e='';
+if(!(f.un||'').trim())e='اكتب اسمك.';
+else if(!/^05\d{8}$/.test(f.ph||''))e='رقم الجوال لازم يكون ١٠ أرقام ويبدأ بـ 05.';
+else if((f.pw||'').length<6)e='الرقم السري لا يقل عن ٦ أحرف.';
+else if(f.pw!==f.pw2)e='تأكيد الرقم السري غير مطابق.';
+if(e){S.err=e;draw();return}
+S.acc={name:f.un.trim(),phone:f.ph,pw:f.pw};S.err='';S.f={};S.kscr='patient';draw()}
+function signin(){keep();var f=S.f;
+if(!S.acc)S.err='ما فيه حساب بهذا الاسم. أنشئ حساباً جديداً.';
+else if((f.un||'').trim()!==S.acc.name||f.pw!==S.acc.pw)S.err='الاسم أو الرقم السري غير صحيح.';
+else{S.err='';S.f={};S.kscr=S.pat?'home':'patient'}
+draw()}
+function logout(){keep();S.kscr='auth';S.mode='login';draw()}
+function savePat(){keep();var f=S.f,a=parseInt(f.pa,10),e='';
+if(!(f.pn||'').trim())e='اكتب اسم المريض.';else if(!(a>0&&a<120))e='اكتب العمر بشكل صحيح.';
+if(e){S.err=e;draw();return}
+S.pat={name:f.pn.trim(),age:a,code:String(Math.floor(1000+Math.random()*9000))};S.f={};S.err='';S.kscr='code';draw()}
+function link(){var v=el('cd').value.trim();
+if(!S.pat)S.err='ادخل من تبويب المرافق وأضف المريض ليظهر الرمز.';
+else if(v!==S.pat.code)S.err='الرمز غير صحيح، حاول مرة ثانية.';
+else{S.linked=true;S.err=''}
+draw()}
+function lvl(v){return v<70?['r','قراءتك منخفضة. كُل شيئاً حلواً وتواصل مع ابنك.']:v<=130?['g','ممتاز، قراءتك اليوم طبيعية ومستقرة.']:v<=180?['y','قراءتك مرتفعة شوي، اشرب موية وارتاح.']:['r','قراءتك مرتفعة. تواصل مع ابنك أو الطبيب.']}
+function status(){var v=S.sugar;if(S.alert||(v!==null&&(v>180||v<70)))return'r';if(pend().length||(v!==null&&v>130))return'y';return'g'}
+function pick(i){var fl=i.files&&i.files[0];if(!fl)return;keep();var r=new FileReader();r.onload=function(){S.photo=r.result;draw()};r.readAsDataURL(fl)}
+function mock(n){
+var x=n.toLowerCase().replace(/[أإآ]/g,'ا');
+var cur=S.meds.map(function(m){return m.name.toLowerCase().replace(/[أإآ]/g,'ا')});
+function has(r){return r.test(x)}
+function hasCur(r){return cur.some(function(c){return r.test(c)})}
+var o;
+if(cur.indexOf(x)>-1)o={use:'هذا الدواء مضاف مسبقاً في القائمة.',fit:'caution',note:'تكرار نفس الدواء قد يؤدي إلى جرعة زائدة.',tip:'تأكد مع الطبيب أو الصيدلي قبل إضافته مرة ثانية.'};
+else if(has(/بروفين|ibuprofen|ديكلوفيناك|فولتارين/))o={use:'مسكن للألم والالتهاب.',fit:'caution',note:'قد يرفع ضغط الدم ويؤثر على الكلى، وقد يتعارض مع أدوية الضغط.',tip:'يؤخذ بعد الأكل، وراجع الطبيب قبل إضافته لمريض الضغط أو السكر.'};
+else if(has(/اسبرين|aspirin/))o={use:'يُستخدم عادة لتقليل تجلط الدم.',fit:'caution',note:'قد يزيد خطر النزيف مع بعض الأدوية ومع مميعات الدم.',tip:'لا يُضاف إلا بتوصية الطبيب، ويؤخذ بعد الأكل.'};
+else if(has(/بنادول|باراسيتامول|paracetamol|panadol/))o={use:'خافض للحرارة ومسكن خفيف للألم.',fit:'ok',note:'غالباً لا يظهر تعارض مع أدوية الضغط والسكر عند الاستخدام المعتاد.',tip:'لا تجمعه مع أدوية أخرى تحتوي على الباراسيتامول.'};
+else if(has(/املوديبين|amlodipine/))o=hasCur(/ضغط|املوديبين/)?{use:'يُستخدم عادة لخفض ضغط الدم.',fit:'caution',note:'يوجد دواء ضغط حالي، وجمعهما قد يخفض الضغط أكثر من اللازم.',tip:'اسأل الطبيب قبل الإضافة، وتابع قراءات الضغط.'}:{use:'يُستخدم عادة لخفض ضغط الدم.',fit:'ok',note:'لا يظهر تعارض واضح مع الأدوية الحالية.',tip:'يؤخذ في وقت ثابت يومياً، وتابع قراءات الضغط.'};
+else if(has(/ميتفورمين|metformin|جلوكوفاج/))o={use:'يُستخدم عادة لتنظيم سكر الدم.',fit:'ok',note:'لا يظهر تعارض واضح مع الأدوية الحالية.',tip:'يؤخذ مع الأكل لتقليل اضطراب المعدة.'};
+else o={use:'لم يتعرف عليه الرد التجريبي.',fit:'caution',note:'لا نستطيع الجزم بتوافقه مع الأدوية الحالية.',tip:'اسأل الصيدلي أو الطبيب قبل إضافته.'};
+o.demo=1;return o}
+async function askAI(){
+keep();var n=(S.f.dn||'').trim();if(!n){S.ai={e:'اكتب اسم الدواء أولاً.'};draw();return}
+S.ai={wait:1};draw();
+try{
+var sm=window.claude&&await window.claude.use('sample');
+if(!sm)throw 0;
+var cur=S.meds.map(function(m){return m.name}).join('، ')||'لا يوجد';
+var r=await sm.json('أنت مساعد معلومات دوائية لمرافق يعتني بمريض اسمه '+S.pat.name+' عمره '+S.pat.age+' سنة. الدواء الجديد: '+n+'. الأدوية الحالية: '+cur+'. أجب بـ JSON فقط بهذا الشكل: {"use":"فائدة الدواء المعتادة في جملة قصيرة","fit":"ok أو caution","note":"هل يتعارض مع الأدوية الحالية أو مع الضغط والسكر، في جملة أو جملتين","tip":"نصيحة استخدام قصيرة"}. لا تشخّص ولا تعطِ جرعات، وإذا لم تعرف الدواء قل ذلك وأوصِ بسؤال الصيدلي. اكتب بالعربية.',{modelTier:'quick'});
+S.ai=r&&r.use?r:{e:'لم تصل إجابة واضحة. اسأل الصيدلي.'}
+}catch(e){await new Promise(function(z){setTimeout(z,900)});S.ai=mock(n)}
+draw()}
+function addMed(){keep();var n=(S.f.dn||'').trim();if(!n){S.ai={e:'اكتب اسم الدواء أولاً.'};draw();return}
+S.meds.push({id:Date.now(),name:n,dose:S.f.dd||'حبة واحدة',time:S.f.dt||'بعد الغداء',color:S.color,photo:S.photo,taken:false});
+S.fresh=n;S.f={};S.photo=null;S.ai=null;S.kscr='home';draw()}
+function rep(){var m=S.meds.map(function(x){return '- '+x.name+' ('+x.dose+'، '+x.time+')'}).join('\n')||'- لا يوجد';return 'ملخص مريض - تطبيق سَنَد\nالاسم: '+S.pat.name+' ('+S.pat.age+' سنة)\nمتوسط السكر (30 يوم): 126\nمتوسط الضغط: 130/85\nالالتزام بالدواء: 86%\nجرعات فائتة: 4\nالأدوية الحالية:\n'+m+'\nللمراجعة الطبية وليس للتشخيص.'}
+async function copyRep(){try{await navigator.clipboard.writeText(rep());S.err='تم نسخ الملخص.'}catch(e){S.err='تعذر النسخ هنا.'}draw()}
+async function saveRep(){var b=new Blob([rep()],{type:'text/plain'});try{var d=window.claude&&await window.claude.use('downloads');if(d){await d.save({filename:'sanad-summary.txt',data:b})}else{var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='sanad-summary.txt';document.body.appendChild(a);a.click();a.remove()}S.err=''}catch(e){S.err='تعذر الحفظ هنا. استخدم النسخ.'}draw()}
+function errb(){return S.err?'<div class="card r" style="font-size:14px">'+S.err+'</div>':''}
+function fld(id,lab,type,ph,extra){return '<div><label for="'+id+'">'+lab+'</label><input id="'+id+'" type="'+type+'" value="'+V(id)+'" placeholder="'+ph+'" '+(extra||'')+'></div>'}
+function oldBase(){
+if(!S.linked)return '<div style="height:10px"></div><h1 class="h">ربط الجهاز</h1><p class="note" style="font-size:16px">اكتب الرمز الذي أعطاك إياه ابنك أو ابنتك</p><input id="cd" type="tel" inputmode="numeric" maxlength="4" placeholder="٤ أرقام" style="font-size:32px;text-align:center;letter-spacing:8px"><button class="big g" onclick="link()">'+I.ok+'ربط</button>'+errb()+'<p class="note">للتجربة: ادخل من تبويب المرافق، أضف المريض، وانسخ الرمز.</p>';
+if(S.scr==='home'){
+var p=pend()[0],m,ban='';
+if(S.fresh)ban='<div class="card b" style="font-size:15px">'+esc(S.acc.name)+' أضاف دواء جديد: <b>'+esc(S.fresh)+'</b></div>';
+if(p){var pic=p.photo?'<img src="'+p.photo+'" alt="صورة الدواء" style="max-width:100%;max-height:150px;border-radius:12px">':box(p.color);
+m='<div class="med y">'+pic+'<h2>'+esc(p.name)+'</h2><p>'+esc(p.dose)+' '+esc(p.time)+'</p><button class="lnk" onclick="speak(\'حان الآن موعد '+esc(p.name)+'، '+esc(p.dose)+' '+esc(p.time)+'\')">استمع للتنبيه</button></div><button class="big g" onclick="take('+p.id+')">'+I.ok+'أخذت الدواء</button>'}
+else if(S.meds.length)m='<div class="med g">'+I.ok.replace('<svg','<svg width="56" height="56"')+'<h2>'+(todays().length?'أخذت كل أدويتك':'لا أدوية اليوم')+'</h2><p>'+(todays().length?'صحتين وعافية':'يومك هادئ')+'</p></div>';
+else m='<div class="med" style="background:var(--bg)"><h2>أهلاً '+esc(S.pat.name)+'</h2><p style="font-size:16px;color:var(--mut)">لا توجد أدوية بعد. سيضيفها ابنك لك.</p></div>';
+return '<div class="top"><span>أهلاً '+esc(S.pat.name)+'</span><span>٢:٠٠ م</span></div>'+ban+m+'<button class="big b" onclick="go(\'mic\')">'+I.mic+'سجّل قياسي</button><div style="flex:1"></div><button class="big r" onclick="help()">'+I.sos+'أحتاج مساعدة</button>'}
+if(S.scr==='mic')return '<h1 class="h">قل رقم السكر</h1><div class="mic">'+I.mic+'</div><p class="note">في التطبيق الفعلي: يتكلم المسن أو يصوّر شاشة الجهاز. هنا اختر رقماً للتجربة.</p><div class="chips"><button onclick="rec(95)">٩٥<small>طبيعي</small></button><button onclick="rec(150)">١٥٠<small>مرتفع شوي</small></button><button onclick="rec(240)">٢٤٠<small>مرتفع</small></button></div><div style="flex:1"></div><button class="big" style="background:var(--bg);color:var(--ink)" onclick="go(\'home\')">رجوع</button>';
+if(S.scr==='res'){var L=lvl(S.sugar);return '<div class="med '+L[0]+'" style="margin-top:10px"><h2 style="font-size:46px">'+ar(S.sugar)+'</h2><p style="margin-top:8px;font-weight:500">'+L[1]+'</p></div><div style="flex:1"></div><button class="big g" onclick="go(\'home\')">تمام</button>'}
+return '<div class="med r" style="margin-top:20px"><h2>وصل تنبيهك</h2><p>أرسلنا لابنك رسالة مع مكانك</p></div><p class="note">خلك مرتاح، هو في الطريق للاتصال بك.</p><div style="flex:1"></div><button class="big" style="background:var(--bg);color:var(--ink)" onclick="cancel()">إلغاء التنبيه</button>'}
+function kidBase(){
+var k=S.kscr;
+if(k==='auth'){
+if(S.mode==='signup')return '<div style="height:6px"></div><h1 class="h">إنشاء حساب في سَنَد</h1>'+fld('un','الاسم','text','نورة')+fld('ph','رقم الجوال','tel','05xxxxxxxx','inputmode="numeric" maxlength="10"')+fld('pw','الرقم السري','password','٦ أحرف على الأقل')+fld('pw2','تأكيد الرقم السري','password','أعد كتابته')+errb()+'<button class="sec pri" onclick="signup()">إنشاء حساب</button><button class="lnk" style="text-align:center" onclick="mode(\'login\')">لدي حساب</button>';
+return '<div style="height:6px"></div><h1 class="h">تسجيل الدخول</h1>'+fld('un','الاسم','text','نورة')+fld('pw','الرقم السري','password','الرقم السري')+errb()+'<button class="sec pri" onclick="signin()">دخول</button><button class="lnk" style="text-align:center" onclick="mode(\'signup\')">إنشاء حساب جديد</button>'}
+if(k==='patient')return '<div class="top"><span></span><b style="color:var(--ink)">إضافة مريض</b></div><p class="note" style="font-size:15px">أدخل بيانات والدك أو والدتك لنبدأ المتابعة</p>'+fld('pn','اسم المريض','text','أبو محمد')+fld('pa','العمر','tel','٧٠','inputmode="numeric" maxlength="3"')+errb()+'<button class="sec pri" onclick="savePat()">حفظ وإنشاء رمز الربط</button>';
+if(k==='code')return '<div style="height:10px"></div><h1 class="h">رمز الربط</h1><p class="note" style="font-size:15px">اكتب هذا الرمز في جوال '+esc(S.pat.name)+' ليرتبط بحسابك</p><div class="card b"><div class="code">'+ar(S.pat.code)+'</div></div><button class="sec pri" onclick="kgo(\'home\')">متابعة إلى صفحة المتابعة</button>';
+if(k==='doc')return '<div class="top"><button class="lnk" style="margin:0" onclick="kgo(\'home\')">رجوع</button><span>ملخص الطبيب</span></div><div class="card" style="background:var(--bg)"><div class="rep"><div><span>'+esc(S.pat.name)+'</span><b>'+ar(S.pat.age)+' سنة</b></div><div><span>متوسط السكر (٣٠ يوم)</span><b>١٢٦</b></div><div><span>متوسط الضغط</span><b>١٣٠/٨٥</b></div><div><span>الالتزام بالدواء</span><b>٨٦٪</b></div><div class="bar"><i style="width:86%"></i></div><div><span>جرعات فائتة</span><b>٤</b></div><div><span>الأدوية الحالية</span><b>'+ar(S.meds.length)+'</b></div></div></div><div class="cols"><button class="sec" onclick="copyRep()">نسخ النص</button><button class="sec" onclick="saveRep()">حفظ كملف</button></div>'+(S.err?'<p class="note">'+S.err+'</p>':'')+'<p class="note">للمراجعة الطبية وليس للتشخيص.</p>';
+if(k==='meds'){var a=S.ai,x='';
+if(a&&a.wait)x='<div class="ai">يفحص الذكاء الاصطناعي الدواء…</div>';
+else if(a&&a.e)x='<div class="ai">'+esc(a.e)+'</div>';
+else if(a)x='<div class="card '+(a.fit==='ok'?'g':'y')+'" style="font-size:14px"><b>'+(a.fit==='ok'?'لا يظهر تعارض واضح':'انتبه قبل الإضافة')+'</b><br>'+esc(a.use)+'<br>'+esc(a.note)+'<br><b>نصيحة:</b> '+esc(a.tip)+'<br><span style="font-size:12px">'+(a.demo?'رد تجريبي للعرض، يُربط بنموذج ذكاء اصطناعي في النسخة الكاملة. ':'')+'معلومات عامة، راجع الصيدلي أو الطبيب.</span></div>';
+var cols=['#F4F4F0','#F2A7B5','#9CC6F5','#F2C762','#8FD1A8'],sw=cols.map(function(c){return '<label><input type="radio" name="c" value="'+c+'"'+(S.color===c?' checked':'')+'><span style="background:'+c+'"></span></label>'}).join('');
+function opt(l,v){return l.map(function(y){return '<option'+(y===v?' selected':'')+'>'+y+'</option>'}).join('')}
+var list=S.meds.map(function(y){return '<div class="mrow">'+(y.photo?'<img src="'+y.photo+'" alt="" style="width:34px;height:34px;border-radius:8px;object-fit:cover">':'<span style="width:22px;height:22px;border-radius:50%;background:'+y.color+';border:1px solid var(--bd)"></span>')+'<div><b>'+esc(y.name)+'</b><small>'+esc(y.dose)+'، '+esc(y.time)+'</small></div></div>'}).join('')||'<p class="note">لا توجد أدوية مضافة بعد.</p>';
+return '<div class="top"><button class="lnk" style="margin:0" onclick="kgo(\'home\')">رجوع</button><b style="color:var(--ink)">أدوية '+esc(S.pat.name)+'</b></div><div>'+list+'</div><div class="card" style="background:var(--bg);display:flex;flex-direction:column;gap:10px"><b>إضافة دواء</b>'+fld('dn','اسم الدواء','text','مثال: أملوديبين')+'<div class="cols"><div><label for="dd">الجرعة</label><select id="dd">'+opt(['حبة واحدة','حبتان','نصف حبة'],S.f.dd)+'</select></div><div><label for="dt">الوقت</label><select id="dt">'+opt(['بعد الفطور','بعد الغداء','بعد العشاء','قبل النوم'],S.f.dt||'بعد الغداء')+'</select></div></div><div><label for="im">صورة علبة الدواء</label><input id="im" type="file" accept="image/*" onchange="pick(this)">'+(S.photo?'<img src="'+S.photo+'" alt="صورة الدواء" style="margin-top:8px;max-height:90px;border-radius:10px">':'')+'</div><div><label>لون الحبة (إذا ما فيه صورة)</label><div class="sw">'+sw+'</div></div><button class="sec" onclick="askAI()">اسأل الذكاء الاصطناعي: هل يناسب أدويته؟</button>'+x+'<button class="sec pri" onclick="addMed()">إضافة وإرسال لجوال '+esc(S.pat.name)+'</button></div>'}
+var s=status(),pn=pend(),T={g:['مستقر',S.meds.length?'أخذ أدويته وقراءاته جيدة':'لا توجد أدوية مضافة بعد'],y:['انتبه',pn.length?'باقي '+ar(pn.length)+' من الأدوية اليوم':'قراءة السكر مرتفعة شوي'],r:['يحتاج تواصل',S.alert?'ضغط زر المساعدة الآن':'قراءة تحتاج متابعة']};
+var al=S.alert?'<div class="card r"><b>تنبيه طوارئ</b><br>'+esc(S.pat.name)+' ضغط زر المساعدة. الموقع: البيت، الرياض.</div>':'';
+var lk=S.linked?'<span class="pill" style="background:var(--gb);color:var(--g)">الجهاز مرتبط</span>':'<div class="card b" style="font-size:14px;display:flex;justify-content:space-between;align-items:center"><span>رمز الربط</span><b style="font-size:22px;letter-spacing:4px">'+ar(S.pat.code)+'</b></div>';
+return '<div class="top"><b style="font-size:20px;color:var(--ink)">متابعة المريض</b><button class="lnk" style="margin:0" onclick="logout()">خروج</button></div><p class="note" style="text-align:start">أهلاً '+esc(S.acc.name)+'</p>'+al+
+'<div class="card '+s+'"><div class="row"><span>'+esc(S.pat.name)+' ('+ar(S.pat.age)+')</span><span class="pill">'+T[s][0]+'</span></div><ul><li>'+T[s][1]+'</li><li>الدواء: '+(!S.meds.length?'لا يوجد':pn.length?'متأخر':'تم أخذه')+'</li><li>آخر قياس سكر: '+(S.sugar===null?'غير مسجل اليوم':ar(S.sugar))+'</li></ul></div>'+lk+
+'<div class="ai"><b>ملاحظة ذكية:</b> السكر يرتفع غالباً بعد الغداء هذا الأسبوع. يُفضّل مراجعة الطبيب.</div>'+
+'<button class="sec pri" onclick="kgo(\'table\')">جدول الأدوية وشرحها</button><button class="sec" onclick="kgo(\'doc\')">ملخص الطبيب</button>'}
+function draw(){
+el('t-old').className=S.view==='old'?'on':'';el('t-kid').className=S.view==='kid'?'on':'';
+el('app').innerHTML=S.view==='old'?old():kid()}
+var DAYS=['السبت','الأحد','الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة'],SH=['س','ح','ن','ث','ر','خ','ج'];
+function todays(){return S.meds.filter(function(m){return m.days[S.today]})}
+function pend(){return todays().filter(function(m){return!S.log[m.id+':'+S.today]}).sort(function(x,y){return(S.ring.indexOf(y.id)>-1)-(S.ring.indexOf(x.id)>-1)})}
+function take(id){S.log[id+':'+S.today]=1;S.ring=S.ring.filter(function(x){return x!==id});S.fresh=null;draw()}
+function keep(){document.querySelectorAll('#app input[id],#app select[id],#app textarea[id]').forEach(function(e){if(e.type==='file')return;S.f[e.id]=e.type==='checkbox'?(e.checked?'1':'0'):e.value});var c=document.querySelector('input[name=c]:checked');if(c)S.color=c.value}
+function setView(v){keep();S.view=v;S.scr='home';S.err='';draw();
+if(v==='old'&&S.linked){var p=pend().filter(function(m){return S.ring.indexOf(m.id)>-1})[0];if(p)speak('حان الآن موعد '+p.name+'، '+p.dose+' '+p.time)}}
+function advance(){S.today=(S.today+1)%7;if(S.today===0)S.log={};S.ring=todays().map(function(m){return m.id});draw()}
+function addMed(){keep();var n=(S.f.dn||'').trim();if(!n){S.ai={e:'اكتب اسم الدواء أولاً.'};draw();return}
+var d=[];for(var i=0;i<7;i++)d.push(S.f['dy'+i]!=='0');
+if(!d.some(Boolean)){S.ai={e:'اختر يوماً واحداً على الأقل.'};draw();return}
+var m={id:Date.now(),name:n,dose:S.f.dd||'حبة واحدة',time:S.f.dt||'بعد الغداء',color:S.color,photo:S.photo,days:d,use:(S.f.pu||'').trim()||'لم يُضف شرح.',stop:(S.f.ps||'').trim()||'حسب توجيه الطبيب.'};
+S.meds.push(m);if(d[S.today])S.ring.push(m.id);
+S.fresh=n;S.f={};S.photo=null;S.ai=null;S.kscr='table';draw()}
+function cell(m,d){
+if(!m.days[d])return '<td class="c0">–</td>';
+if(S.log[m.id+':'+d])return '<td class="c1" aria-label="تم أخذه">'+I.ok.replace('<svg','<svg width="16" height="16"')+'</td>';
+if(d<S.today)return '<td class="c2" aria-label="فائتة">×</td>';
+if(d===S.today)return '<td class="c3" aria-label="موعدها اليوم">●</td>';
+return '<td class="c4" aria-label="لم يحن موعدها">○</td>'}
+function tableView(){
+var head='<tr><th></th>'+SH.map(function(s,i){return '<th'+(i===S.today?' class="tdy"':'')+' title="'+DAYS[i]+'">'+s+'</th>'}).join('')+'</tr>';
+var rows=S.meds.map(function(m){return '<tr><td class="nm">'+esc(m.name)+'</td>'+[0,1,2,3,4,5,6].map(function(d){return cell(m,d)}).join('')+'</tr>'}).join('');
+var tb=S.meds.length?'<div style="overflow-x:auto"><table class="tb">'+head+rows+'</table></div><p class="note">اليوم: '+DAYS[S.today]+' · <span style="color:var(--g)">أخضر</span> تم، <span style="color:var(--r)">×</span> فائتة، <span style="color:var(--y)">●</span> اليوم، ○ لم يحن بعد</p>':'<p class="note" style="padding:20px 0">لا توجد أدوية بعد. أضف أول دواء.</p>';
+var det=S.meds.map(function(m){var ds=m.days.map(function(on,i){return on?DAYS[i]:null}).filter(Boolean);ds=ds.length===7?'كل يوم':ds.join('، ');
+return '<div class="card" style="background:var(--bg);font-size:14px;line-height:1.7"><div style="display:flex;gap:10px;align-items:center;margin-bottom:4px">'+(m.photo?'<img src="'+m.photo+'" alt="" style="width:40px;height:40px;border-radius:8px;object-fit:cover">':'<span style="width:26px;height:26px;border-radius:50%;background:'+m.color+';border:1px solid var(--bd)"></span>')+'<b style="font-size:17px">'+esc(m.name)+'</b></div><b>ما هو:</b> '+esc(m.use)+'<br><b>الجرعة:</b> '+esc(m.dose)+' '+esc(m.time)+'<br><b>الأيام:</b> '+ds+'<br><b>يتوقف عنه:</b> '+esc(m.stop)+'</div>'}).join('');
+return '<div class="top"><button class="lnk" style="margin:0" onclick="kgo(\'home\')">رجوع</button><b style="color:var(--ink);font-size:18px">جدول أدوية '+esc(S.pat.name)+'</b></div>'+tb+'<button class="sec pri" onclick="kgo(\'meds\')">إضافة دواء</button><button class="sec" onclick="advance()">تجربة: انتقل لليوم التالي</button><p class="note">عند حلول موعد الدواء يصل تنبيه لجوال '+esc(S.pat.name)+'.</p>'+det}
+function medsForm(){
+if(!S.f.pu&&S.ai&&S.ai.use)S.f.pu=S.ai.use;
+var a=S.ai,x='';
+if(a&&a.wait)x='<div class="ai">يفحص الذكاء الاصطناعي الدواء…</div>';
+else if(a&&a.e)x='<div class="ai">'+esc(a.e)+'</div>';
+else if(a)x='<div class="card '+(a.fit==='ok'?'g':'y')+'" style="font-size:14px"><b>'+(a.fit==='ok'?'لا يظهر تعارض واضح':'انتبه قبل الإضافة')+'</b><br>'+esc(a.use)+'<br>'+esc(a.note)+'<br><b>نصيحة:</b> '+esc(a.tip)+'<br><span style="font-size:12px">'+(a.demo?'رد تجريبي للعرض. ':'')+'معلومات عامة، راجع الصيدلي أو الطبيب.</span></div>';
+var cols=['#F4F4F0','#F2A7B5','#9CC6F5','#F2C762','#8FD1A8'],sw=cols.map(function(c){return '<label><input type="radio" name="c" value="'+c+'"'+(S.color===c?' checked':'')+'><span style="background:'+c+'"></span></label>'}).join('');
+function opt(l,v){return l.map(function(y){return '<option'+(y===v?' selected':'')+'>'+y+'</option>'}).join('')}
+var dy=DAYS.map(function(n,i){return '<label class="dy"><input type="checkbox" id="dy'+i+'"'+(S.f['dy'+i]!=='0'?' checked':'')+'><span>'+n+'</span></label>'}).join('');
+return '<div class="top"><button class="lnk" style="margin:0" onclick="kgo(\'table\')">رجوع</button><b style="color:var(--ink)">إضافة دواء</b></div><div class="card" style="background:var(--bg);display:flex;flex-direction:column;gap:10px">'+fld('dn','اسم الدواء','text','مثال: أملوديبين')+'<div class="cols"><div><label for="dd">عدد الحبوب</label><select id="dd">'+opt(['حبة واحدة','حبتان','نصف حبة'],S.f.dd)+'</select></div><div><label for="dt">متى يؤخذ</label><select id="dt">'+opt(['بعد الفطور','بعد الغداء','بعد العشاء','قبل النوم'],S.f.dt||'بعد الغداء')+'</select></div></div><div><label>أيام الأخذ</label><div class="dys">'+dy+'</div></div><div><label for="pu">ما هو ولأي شيء يُستخدم</label><textarea id="pu" rows="2" placeholder="مثال: يخفض ضغط الدم">'+esc(S.f.pu||'')+'</textarea></div><div><label for="ps">متى يتوقف عنه</label><textarea id="ps" rows="2" placeholder="مثال: عند انتهاء العلبة أو بأمر الطبيب">'+esc(S.f.ps||'')+'</textarea></div><div><label for="im">صورة علبة الدواء</label><input id="im" type="file" accept="image/*" onchange="pick(this)">'+(S.photo?'<img src="'+S.photo+'" alt="صورة الدواء" style="margin-top:8px;max-height:90px;border-radius:10px">':'')+'</div><div><label>لون الحبة (إذا ما فيه صورة)</label><div class="sw">'+sw+'</div></div><button class="sec" onclick="askAI()">اسأل الذكاء الاصطناعي: هل يناسب أدويته؟</button>'+x+'<button class="sec pri" onclick="addMed()">إضافة وإرسال لجوال '+esc(S.pat.name)+'</button></div>'}
+function kid(){if(S.kscr==='table')return tableView();if(S.kscr==='meds')return medsForm();return kidBase()}
+function old(){var h=oldBase();
+if(S.linked&&S.scr==='home'){var rg=pend().filter(function(m){return S.ring.indexOf(m.id)>-1});
+if(rg.length){var b='<div class="card r" style="text-align:center;font-size:17px"><b>تنبيه الدواء</b><br>حان موعد '+rg.map(function(m){return esc(m.name)}).join(' و')+'</div>';h=h.replace('</div>','</div>'+b)}}
+return h}
+
+draw();
+</script>
+</body>
+</html>
